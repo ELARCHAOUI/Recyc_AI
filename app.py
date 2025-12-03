@@ -49,9 +49,9 @@ if upload:
 
         st.image(Image.open(upload), caption="Image chargée", use_column_width=True)
         if prob_recyclable > threshold:
-            st.success(f"✅ L'objet est recyclable avec une certitude de {prob_recyclable:.2f} %")
+            st.success(f"✅ L'objet est recyclable")
         else:
-            st.error(f"❌ L'objet n'est pas recyclable avec une certitude de {prob_organic:.2f} %")
+            st.error(f"❌ L'objet n'est pas recyclable")
     else:
         st.write("❗ Le modèle n'a pas pu traiter l'image téléchargée.")
 else:
